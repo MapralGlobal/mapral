@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('about/', views.about, name='about'),
@@ -18,4 +20,4 @@ urlpatterns = [
     path('logout/',views.logoutView,name="logout"),
     path('verifyEmail/<str:token>',views.verifyEmail,name="verifyEmail"),
     path('dashboard/',views.dashboard,name="dashboard"),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
