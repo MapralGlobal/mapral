@@ -1,0 +1,77 @@
+@font-face {
+    font-family: ptSans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+.loginHead {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    color: #3D3D3D;
+}
+
+.loginText {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #3D3D3D;
+}
+
+.formHead {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    color: #3D3D3D;
+}
+
+.InputForm {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3D3D3D;
+    background-color: #F5F7FA;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.loginBtn{
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4877e6;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width:fit-content;
+}
+
+.InputForm:focus {
+    outline: none;
+}
+
+.disText{
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #3D3D3D;
+}
+
+.mainRow1{
+    min-height: 100vh;
+}
+
+label{
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3D3D3D;
+}
+

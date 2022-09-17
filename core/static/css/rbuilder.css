@@ -1,0 +1,75 @@
+@font-face {
+    font-family: ptSans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+
+.resumeTop {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 40px;
+
+    color: #3D3D3D;
+}
+
+.resumeForm {
+    position: relative;
+}
+
+#s,
+#s1,
+#s2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+#s1 {
+    left: 100%;
+    transition: 0.3s;
+
+}
+
+#s2 {
+    left: 100%;
+    transition: 0.3s;
+
+}
+
+.footer {
+    display: none !important;
+
+}
+
+.stepName {
+    font-family: ptSans;
+    font-style: normal;
+    letter-spacing: 0.1em;
+
+    color: #3D3D3D
+}
+
+label {
+    font-family: ptSans !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    letter-spacing: 0.03em !important;
+
+    color: #3D3D3D !important;
+}
+
+.form-control {
+    background-color: #F5F7FA !important;
+    border-radius: 5px !important;
+    padding: 10px;
+    border:none !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border:none !important;
+}

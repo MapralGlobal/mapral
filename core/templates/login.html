@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Mapral - Login
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock css %}
+
+
+{% block body %}
+
+<div class="row mainRow1">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    {{ message }}    
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="col-12">
+        <h2 class="loginHead mx-5 mt-5">Log in</h2>
+        <p class="loginText mx-5">Get back into your Mapral Account</p>
+        <br>
+        <h3 class="formHead mx-5 mb-4">Enter your basic details</h3>
+        <form action="" method="POST" class="loginForm d-flex flex-column">
+            {% csrf_token %}
+            <input type="" name="email" class="InputForm p-2 mx-5 mt-2" placeholder="Enter Email">
+            <input type="" name="pass" class="InputForm p-2 mx-5 mt-2" placeholder="Enter Password">
+            <div class="d-flex align-items-center mx-5 mt-4 ">
+            <button class="loginBtn p-2 px-3">Login</button>
+                <p class="disText mb-0 mx-2">Don't Have an account</p>
+                <p class="disText mb-0">Forgot Password</p>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock body %}

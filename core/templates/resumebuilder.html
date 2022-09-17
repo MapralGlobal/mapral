@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Mapral - Resume Builder
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/rbuilder.css' %}">
+{% endblock css %}
+
+
+{% block body %}
+
+<div class="row mRow">
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    {{ message }}    
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="col-12 px-4 py-2">
+        <h1 class="resumeTop">Resume Builder</h1>
+    </div>
+
+    <div class="col-12 formWrapper">
+        <form action="" method="POST" enctype="multipart/form-data" class="resumeForm">
+            {% csrf_token %}
+            <div class="step1" id="s">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container">
+                            <h6 class="stepName my-4"><b>STEP 1</b> - Confirming basic details.</h2>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="container">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+                                <input type="text" name="name" class="form-control" id="" placeholder=""
+                                    value="{{user.fname}} {{user.lname}}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <input type="email" name="email" class="form-control" id="" placeholder=""
+                                    value="{{user.email}}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                                <input type="tel" name="phone" class="form-control" id="" placeholder=""
+                                    value="{{user.phone}}">
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-6">
+                        <div class="container">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Job Title</label>
+                                <input type="text" name="jtitle" class="form-control" id="" placeholder="">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Profile Picture</label>
+                                <input type="file" name="img" class="form-control" id="" placeholder="">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Address</label>
+                                <input type="text" name="city" class="form-control" id="" placeholder="">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="container">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Language</label>
+                                <input type="text" name="lang" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="container">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">About Your Work</label>
+                                <textarea class="form-control" maxlength="320" rows="5" name="aboutWork" id=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="container">
+                            <button type="button" id="b1" class="btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step1" id="s1">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container">
+                            <h6 class="stepName my-4"><b>STEP 2</b> - Adding Experiences.</h2>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="container">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Company Name</label>
+                                <input type="text" name="cname" class="form-control" id="" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Job Position</label>
+                                <input type="text" name="jobPosition" class="form-control" id="" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Start Date / End Date</label>
+                                <input type="text" name="date" class="form-control" id="" placeholder="">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-6">
+                        <div class="container">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Job Description</label>
+                                <textarea class="form-control" name="jobDesc" id=""></textarea>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Responsibilities</label>
+                                <textarea class="form-control" name="resp" id=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="container">
+                            <button type="button" id="b2" class="btn btn-primary">Back</button>
+                            <button type="button" id="b3" class="btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step1" id="s2">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container">
+                            <h6 class="stepName my-4"><b>STEP 3</b> - Education & Skills.</h2>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="container">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">School / College</label>
+                                <input type="text" class="form-control" id="" name="school">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Degree</label>
+                                <input type="text" class="form-control" id="" name="degree">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Start & End Year</label>
+                                <input type="text" class="form-control" id="" name="sdate">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-6">
+                        <div class="container">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Skills</label>
+                                <textarea class="form-control" id="" name="skills" placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="container">
+                            <button type="button" id="b4" class="btn btn-primary">Back</button>
+                            <button type="Submit" id="b5" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    let f1 = document.getElementById('s');
+    let f2 = document.getElementById('s1');
+    let f3 = document.getElementById('s2');
+    let b1 = document.getElementById('b1');
+    let b2 = document.getElementById('b2');
+    let b3 = document.getElementById('b3');
+    let b4 = document.getElementById('b4');
+
+    b1.addEventListener('click', function () {
+        f1.style.left = '-200%';
+        f2.style.left = '0';
+    });
+
+    b2.addEventListener('click', function () {
+        f1.style.left = '0';
+        f2.style.left = '100%';
+    });
+
+    b3.addEventListener('click', function () {
+        f2.style.left = '-200%';
+        f3.style.left = '0';
+    });
+
+    b4.addEventListener('click', function () {
+        f3.style.left = '100%';
+        f2.style.left = '0';
+    });
+
+
+
+</script>
+
+{% endblock body %}

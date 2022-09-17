@@ -1,0 +1,29 @@
+@font-face {
+    font-family: ptSans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+.navIcons1 {
+    color: #3d3d3d;
+    fill: #3d3d3d;
+    font-size: medium;
+}
+
+.backWrapper {
+    background-color: #F5F7FA;
+    width: fit-content;
+    border-radius: 8px;
+}
+
+.blogTitle {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    color: #3D3D3D;
+}
+
+@media (max-width: 768px) {
+    .entireRow{
+        margin-top: 5vh !important;
+    }
+}

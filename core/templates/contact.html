@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Mapral - Contact
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock css %}
+
+{% block body %}
+<div class="row serviceRows">
+  <div class="col-lg-7 col-md-7 col-sm-12 px-4 serviceFirstLeft d-flex flex-column justify-content-center">
+    <h1 class="serviceHead mx-3">Contact Mapral</h1>
+    <p class="serviceText mb-0 mx-3">
+      Subheading for the section</p>
+    <br>
+    <p class="fListItem1 mx-3">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dui orci laoreet facilisis mattis mauris, blandit
+      proin. Elementum accumsan tempor tincidunt etiam platea convallis lobortis vel dignissim.
+    </p>
+
+    <a href="tel:+918369088360" class="callMapralButton btn d-flex align-items-center mx-3">
+      <iconify-icon class="navIcons" icon="fluent:call-inbound-16-regular"></iconify-icon> &nbsp Call Marpal
+    </a>
+    <br><br>
+  </div>
+  <div class="col-lg-5 col-md-5 col-sm-12">
+    <img src="{% static 'img/serviceImg1.png' %}" alt="" class="serviceHeadImg serviceHeadImg1 img-fluid">
+  </div>
+</div>
+
+<div class="row p-4">
+  <p class="contactMapText mb-0 mx-4 mt-4">WE HAVE MULTIPLE SETUPS!</p>
+  <h1 class="contactMapHead mx-4 mb-4">Mapral’s Branches</h1>
+
+  <div class="col-lg-5 col-md-5 col-sm-12">
+    <p class="mapHeading mx-4">MUMBAI BRANCH</p>
+    <div class="mapView mx-4">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8119.424388794754!2d72.87583024995119!3d19.281108954667115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b06f4576d6c5%3A0x8447603dbc1e66cf!2sSmital%20Avenue%2C%20Goldstar%20Decent%20Homes%2C%20Hatkesh%20Rd%2C%20Hatkesh%20Udhog%20Nagar%2C%20Mira%20Road%2C%20Mira%20Bhayandar%2C%20Maharashtra%20401107!5e0!3m2!1sen!2sin!4v1661669562297!5m2!1sen!2sin"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="addressText my-3">
+        Mapral MAS – Office No. 14, First Floor, Smital Avenue, SBI Bank Lane, Vinay Nagar, Mira
+        Bhayandar Rd, Mira Road (E), Thane 401107
+      </p>
+
+
+    </div>
+  </div>
+
+  <div class="col-lg-5 col-md-5 col-sm-12 mx-2 mx-sm-0">
+    <p class="mapHeading mx-4">NAGPUR BRANCH</p>
+    <div class="mapView mx-4">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7444.186097513349!2d79.07874695390623!3d21.108856199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf45906efbc9%3A0x6e514f49b6e6aff3!2sJay%20Bhim%20Chowk!5e0!3m2!1sen!2sin!4v1661671297451!5m2!1sen!2sin"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="addressText my-3">
+        MAPRAL HOUSE, Plot no. 388, Near Jaibhim Chowk, Mahendra Nagar, Nagpur -440017
+      </p>
+
+    </div>
+  </div>
+
+  <div class="row contactInfo px-4 d-sm-none">
+    <div class="col-5">
+      <p class="contactHeadText">Contact</p>
+      <div class="contactText d-flex align-items-center">
+        <span class="pIcon mx-2">
+          <iconify-icon class="navIcons" icon="fluent:call-inbound-16-regular"></iconify-icon>
+        </span>
+        <span class="contactInfoText">09819344931</span>
+      </div>
+      <div class="contactText d-flex align-items-center">
+        <span class="pIcon mx-2">
+          <iconify-icon class="navIcons" icon="clarity:email-line"></iconify-icon>
+        </span>
+        <span class="contactInfoText">contact@mapralglobal.com</span>
+      </div>
+    </div>
+
+    <div class="col-5">
+      <p class="contactHeadText">
+        Contact</p>
+      <div class="contactText d-flex align-items-center">
+        <span class="pIcon mx-2">
+          <iconify-icon class="navIcons" icon="fluent:call-inbound-16-regular"></iconify-icon>
+        </span>
+        <span class="contactInfoText">8380815415, 9112280564, 07122648700</span>
+      </div>
+
+      <div class="contactText d-flex align-items-center">
+        <span class="pIcon mx-2">
+          <iconify-icon class="navIcons" icon="clarity:email-line"></iconify-icon>
+        </span>
+        <span class="contactInfoText">contact@mapralglobal.com</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row p-4">
+  <p class="contactMapText mb-0 mx-4 mt-4">HERE’S A LITTLE HELP!!</p>
+  <h1 class="contactMapHead mx-4 mb-4">Frequently Asked Questions</h1>
+  <div class="container px-3">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            1. What kind of services do we get in statutory Compliance?
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+            <code>.accordion-flush</code> class. This is the first item's accordion body.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            2. What labour laws are applicable to the manufacturing unit?
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+            <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+            filled with some actual content.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            3. What kind of manpower do we provide?
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+            <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+            happening here in terms of content, but just filling up the space to make it look, at least at first glance,
+            a bit more representative of how this would look in a real-world application.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            4. What are the categories of wages that should be given to an employee?
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+            <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+            happening here in terms of content, but just filling up the space to make it look, at least at first glance,
+            a bit more representative of how this would look in a real-world application.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            5. Why should be the employees covered under the labour law act?
+          </button>
+        </h2>
+        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">They should act because it is mandatory and for the betterment of employee in
+            respect of social security, health, and well fare facilities. Not only the employee but the employer also
+            gets benefited</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+            6. Why is it very important for a recruiter to cover the unskilled employees under labour law act?
+          </button>
+        </h2>
+        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+            <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+            happening here in terms of content, but just filling up the space to make it look, at least at first glance,
+            a bit more representative of how this would look in a real-world application.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+            7. What kind of services do we get under compliance?
+          </button>
+        </h2>
+        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+            <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+            happening here in terms of content, but just filling up the space to make it look, at least at first glance,
+            a bit more representative of how this would look in a real-world application.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row p-4">
+  <div class="row">
+    <div class="col-8">
+      <h1 class="contactMapHead mx-4 mb-4">Let's have a talk</h2>
+    </div>
+    <div class="row">
+      <div class="col-10">
+        <form action="" method="post">
+          {% csrf_token %}
+        <div class="row">
+          <div class="col-6">
+            <div class="container">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="" placeholder="">
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="" placeholder="">
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Phone</label>
+                <input type="tel" name="phone" class="form-control" id="" placeholder="">
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Subject</label>
+                <input type="text" name="subject" class="form-control" id="" placeholder="">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="container">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Message/Query</label>
+                  <textarea class="form-control" maxlength="320" rows="5" name="message" id=""></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="container">
+                <button type="submit" id="b1" class="btn btn-primary">Send <iconify-icon inline icon="fe:paper-plane" style="color: white;"></iconify-icon></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

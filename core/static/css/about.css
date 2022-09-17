@@ -1,0 +1,83 @@
+@font-face {
+    font-family: ptSans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+.aboutRow {
+    min-height: 100vh;
+}
+
+.aboutHead {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #3D3D3D;
+}
+
+.ownerName {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    color: #3062D8;
+}
+
+.ownerDesc {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    padding: 5px 15px;
+    color: #444D63;
+}
+
+.histHead{
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;  
+    letter-spacing: 0.1em;
+    color: #3D3D3D;
+}
+
+.histHeadText{
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    color: #3062D8;    
+}
+
+.histText{
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    color: #444D63;
+}
+
+.historyImg{
+    width: 75%;
+    height: auto;
+}
+
+.imgBack{
+    height: 100px;
+    width:200px;
+    background-color: #F5F7FA;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBack img{
+    height: 90px;
+    width:180px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .ownerName {
+font-size: 40px;
+    }
+}

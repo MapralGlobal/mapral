@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Mapral - Dashboard
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock css %}
+
+{% block body %}
+<div class="row">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    {{ message }}    
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="col-12">
+        <div class="container pt-4">
+            <img src="{% static 'img/Rectangle 56.png' %}" alt="" class="coverImg img-fluid p-3 ">
+        </div>
+    </div>
+
+    <div class="personalContainer">
+        <img src="/media/{{resume.profilePic}}" alt="" class="profileImg">
+        <h2 class="userName">{{resume.name}}</h2>
+        <p class="role">{{resume.jobTitle}}</p>
+    </div>
+
+    <div class="col-12">
+        <div class="container">
+
+            <p class="contact">Contact <span class="valueHead">
+                    Mobile:
+                </span>
+                <span class="value">
+                    {{resume.phone}}
+                </span>
+                <span class="valueHead">
+
+                    Email:
+                </span>
+                <span class="value">
+
+                    {{resume.email}}
+                </span>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="col-7">
+        <div class="container">
+            <div class="contact">
+                Education & Qualitfication  
+                <p class="value"> The user’s education status and qualifications will show up here.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-5">
+        <div class="container">
+            <div class="contact">
+                Open to work
+                <p class="value"> The user’s education status and</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row my-2">
+        <div class="col-5">
+            <div class="container">
+                <div class="contact">
+                    Job Status
+                    <span class="value"> &nbsp; Currently employed, but looking for a job. </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-7">
+            <div class="container">
+                <div class="contact">
+                    Languages
+                    <span class="value"> &nbsp; Currently employed, but looking for a job. </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-12">
+            <div class="container">
+                <div class="contact">
+                    About
+                    <p class="value">{{resume.aboutWork}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

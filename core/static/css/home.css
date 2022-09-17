@@ -1,0 +1,74 @@
+@font-face {
+    font-family: ptSans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+.serviceHead {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    /* identical to box height */
+    color: #3062D8;
+}
+
+
+
+.serviceText {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #444D63;
+}
+
+.fListItem {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #444D63;
+}
+
+.serviceHeadImg{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.serviceFirstLeft{
+    padding-left: 1rem;
+    padding-right: 0% !important;
+}
+
+.serviceRows{
+    padding: 0% !important;
+    border: 1px solid #444d6340;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.footer0{
+    background-color: #3062D8;
+    color: #fff;
+    font-family: ptSans;
+}
+
+.footer0Text{
+    font-style: normal;
+font-weight: 700;
+}
+
+
+.emailBtn{
+    background-color: #fff;
+    color: #3062D8;
+    font-family: ptSans;
+    font-style: normal;
+    border-radius: 5px;
+}
+
+
+.b-0{
+    border: none !important;
+}

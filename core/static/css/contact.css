@@ -1,0 +1,146 @@
+@font-face {
+    font-family: ptSans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+.serviceHead {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    /* identical to box height */
+    color: #3062D8;
+}
+
+
+
+.serviceText {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #444D63;
+}
+
+.fListItem1 {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+
+    color: #444D63;
+}
+
+.callMapralButton {
+    background-color: #3062D8;
+    border-radius: 5px;
+    color: #fff;
+    font-family: ptSans;
+    width: fit-content;
+    font-size: smaller;
+}
+
+.contactMapText {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #3D3D3D;
+}
+
+.contactMapHead {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    color: #3062D8;
+}
+
+.mapHeading {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    color: #3D3D3D;
+}
+
+#mapDiv {
+    border-radius: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid #3062d8;
+
+}
+
+.addressText {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    color: #444D63;
+    font-size: smaller;
+}
+
+
+.contactHeadText {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    color: #3D3D3D;
+}
+
+.contactInfoText {
+    font-size: smaller !important;
+}
+
+.contactText{
+    font-family: ptSans;
+font-style: normal;
+font-weight: 400;
+
+
+color: #444D63;
+}
+
+.button.accordion-button.collapsed{
+    font-size: small;
+}
+
+.button.accordion-button{
+    font-size: small;
+}
+
+
+.accordion-body{
+    font-size: small;
+}
+
+.form-control {
+    background-color: #F5F7FA !important;
+    border-radius: 5px !important;
+    padding: 10px;
+    border:none !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border:none !important;
+}
+
+@media (max-width: 768px) {
+    .serviceHeadImg1 {
+        height: 40vh !important;
+        margin-bottom: 10px;
+        width: 100vw !important;
+        object-fit: cover;
+    }
+
+    .contactInfo{
+        display: none !important;
+    }
+
+    .contactMapHead{
+        font-size: x-large !important;
+    }
+}

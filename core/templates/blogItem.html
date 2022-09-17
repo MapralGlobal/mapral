@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Mapral -Blogs
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/blogItem.css' %}">
+{% endblock css %}
+
+{% block body %}
+<div class="row entireRow">
+    <div class="col-2">
+        <div class="backWrapper mx-3 my-4">
+            <a href="/blog/" class="backBtn"><iconify-icon class="navIcons1 mx-2 my-2" icon="eva:arrow-back-fill"></iconify-icon></a>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+<div class="row" style="min-height:100vh;">
+
+    <div class="col-12 px-3">
+        <h2 class="blogTitle">{{blog.title}}</h2>
+        <p class="blogBody">
+            {{blog.content}}
+        </p>
+    </div>
+</div>
+
+{% endblock body %}

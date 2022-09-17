@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Mapral -Blogs
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock css %}
+
+{% block body %}
+    <div class="mainBlog p-5">
+        <h2 class="blogHead ">Blogs</h2>
+
+        <div class="row blogContainer">
+            <div class="col-lg-10 col-md-10 col-sm-12">
+                {% if blogs %}
+                    {% for blog in blogs %}
+                    <div class="card blogItem p-3 my-2">
+                        <h5 class="blogTitle">{{blog.title}}</h4>
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 col-sm-12 d-flex justify-content-center align-items-center">
+                                    <p class="blogDesc mb-0">
+                                        {{blog.content|truncatewords:10}}
+                                    </p>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-5 createPart  d-flex justify-content-center align-items-center">
+                                    <p class="date mb-0">{{blog.created_at}}</p>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-5 readBtn  d-flex justify-content-center align-items-center  ">
+                                    <a href="/blogItem/{{blog.slug}}" class="emailBtn btn">Read Blog</a>
+                                </div>
+                            </div>
+                    </div>
+                    {% endfor %}
+
+
+                {% else %}
+                    <p class="histText">No blogs found : (</p>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock body %}

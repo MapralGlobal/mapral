@@ -1,0 +1,373 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic" rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sideFixed {
+            background-color: #333A4A;
+            width: 250px;
+            min-height: 1080px;
+            height: 100%;
+        }
+
+        .mainSection {
+            background-color: #FFF;
+            width: calc(100% - 250px);
+            min-height: 1080px;
+            position: absolute;
+            left: 250px;
+            top: 0%;
+        }
+
+        .propicWrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 35px;
+        }
+
+        .propic {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .sideHeadText {
+            font-family: 'PT Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 18px;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            margin-top: 50px;
+            margin-left: 30px;
+        }
+
+        .line {
+            width: 90%;
+            height: 1px;
+            background-color: #FFFFFF;
+            margin-top: 12px;
+            margin-left: 10%;
+        }
+
+        .iconText {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 18px;
+            font-family: 'PT Sans', sans-serif;
+            letter-spacing: 0.04em;
+            color: #FFFFFF;
+
+        }
+
+        iconify-icon {
+            color: #FFFFFF;
+            fill: #fff;
+            font-size: large;
+            margin-right: 5%;
+        }
+
+        .bodyHead {
+            display: flex;
+            align-items: center;
+            margin-left: 10%;
+        }
+
+        .mt-4 {
+            margin-top: 10%;
+        }
+
+        .pt-3 {
+            padding-top: 8%;
+        }
+
+        .mt-3 {
+            margin-top: 5%;
+        }
+
+        .bodyText {
+            font-family: 'PT Sans', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.04em;
+            color: #fff;
+            margin-left: 10%;
+        }
+
+        .text-disabled {
+            color: #FFFFFF;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .headBodyComp ul {
+            margin-left: 10%;
+        }
+
+        .resumeName {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 37px;
+            /* identical to box height */
+            font-family: 'PT-Sans', sans-serif;
+            color: #333A4A;
+        }
+
+        .mx {
+            margin-left: 10%;
+        }
+
+        .mx-l {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .jobRole {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 18px;
+            letter-spacing: 0.05em;
+            font-family: 'PT-Sans', sans-serif;
+            color: #333A4A
+        }
+
+        .workExperience {
+            font-family: 'Pt-Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 18px;
+            letter-spacing: 0.05em;
+
+            color: #333A4A;
+        }
+
+        .line1 {
+            width: 80%;
+            height: 1px;
+            background-color: #333A4A;
+            margin-top: 12px;
+            margin-left: 10%;
+        }
+
+        .jobPlace {
+            font-family: 'Pt-Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: 0.03em;
+
+            color: #333A4A;
+        }
+
+        .jobPos {
+            font-family: 'Pt-Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: 0.03em;
+
+            color: #333A4A;
+        }
+
+        .t-black {
+            color: #333A4A;
+            font-family: 'Pt-Sans', sans-serif;
+            font-size: 14px;
+        }
+
+        .mt {
+            margin-top: 10px;
+        }
+
+        .workDesc {
+            font-family: 'Pt-Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.03em;
+
+            color: #333A4A;
+        }
+
+        .aboutPerson {
+            font-family: 'Pt-Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+            /* or 133% */
+
+            letter-spacing: 0.03em;
+
+            color: #333A4A;
+
+        }
+    </style>
+</head>
+
+<body id="content">
+
+    <button type="button" id="cmd" class="btn btn-success">Download Resume</button>
+
+    <div class="sideFixed">
+        <div class="propicWrapper">
+            <img src="/media/{{resume.profilePic}}" alt="propic" class="propic">
+        </div>
+
+        <div class="sideText">
+            <div class="headComp">
+                <p class="sideHeadText">CONTACT</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="headBodyComp">
+                <div class="bodyHead mt-4">
+                    <iconify-icon icon="clarity:email-line" class="text-light"></iconify-icon>
+                    <p class="iconText">Email Id</p>
+                </div>
+                <p class="bodyText mt-3">{{resume.email}}</p>
+            </div>
+
+            <div class="headBodyComp pt-3">
+                <div class="bodyHead mt-4">
+                    <iconify-icon icon="codicon:call-outgoing" class="text-light"></iconify-icon>
+                    <p class="iconText">Mobile No.</p>
+                </div>
+                <p class="bodyText mt-3">{{resume.phone}}</p>
+            </div>
+
+
+            <div class="headBodyComp pt-3">
+                <div class="bodyHead mt-4">
+                    <iconify-icon icon="ep:location" class="text-light"></iconify-icon>
+                    <p class="iconText">Location</p>
+                </div>
+                <p class="bodyText mt-3">{{resume.city}}</p>
+            </div>
+
+
+            <div class="headComp">
+                <p class="sideHeadText">EDUCATION</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="headBodyComp">
+                <div class="bodyHead mt-4">
+                    <iconify-icon icon="carbon:building-insights-3" class="text-light"></iconify-icon>
+                    <p class="iconText">College/School</p>
+                </div>
+                <p class="bodyText mt-3">{{education.schoolName}}</p>
+                <p class="bodyText text-disabled">{{education.startDate}}</p>
+
+            </div>
+
+
+            <div class="headBodyComp pt-3">
+                <div class="bodyHead mt-4">
+                    <iconify-icon icon="icon-park-outline:degree-hat" class="text-light"></iconify-icon>
+                    <p class="iconText">Degree</p>
+                </div>
+                <p class="bodyText mt-3">{{education.degree}}</p>
+            </div>
+
+            <div class="headComp">
+                <p class="sideHeadText">Skills</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="headBodyComp pt-3">
+                <ul>
+                    {% for s in skills %}
+                    <li class="bodyText mt-3">{{s}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainSection">
+        <h1 class="resumeName mt-4 mx ">{{resume.name}}</h1>
+        <p class="jobRole mt-3 mx ">{{resume.jobTitle}}</p>
+
+        <p class="aboutPerson mt-3 mx-l">
+            <b>Languages:</b> {{resume.languages}}
+        </p>
+
+        <p class="aboutPerson mt-3 mx-l">
+            {{resume.aboutWork}}
+        </p>
+
+        <p class="workExperience mt-4 mx-l">
+            Work Experience
+        </p>
+
+        <div class="line1">
+
+        </div>
+
+        <div class="jobComp mx-l mt-3">
+            <span class="jobPlace">{{experience.companyName}} /</span> <span
+                class="jobPos">{{experience.jobPosition}}</span>
+            <p class="duration text-disabled t-black mt"> From {{experience.startDate}}</p>
+
+            <p class="aboutPerson mt workDesc">
+                {{experience.jobDescription}}
+            </p>
+            <p class="aboutPerson mt workDesc">
+                {{experience.responsibilities}}
+            </p>
+        </div>
+
+
+    </div>
+
+    <div id="editor"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+        var doc = new jsPDF();
+        var specialElementHandlers = {
+            '#editor': function (element, renderer) {
+                return true;
+            }
+        };
+
+        $('#cmd').click(function () {
+            doc.fromHTML($('#content').html(), 15, 15, {
+                'width': 170,
+                'elementHandlers': specialElementHandlers
+            });
+            doc.save('sample-file.pdf');
+        });
+    </script>
+</body>
+
+</html>

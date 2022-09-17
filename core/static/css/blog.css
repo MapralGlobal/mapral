@@ -1,0 +1,60 @@
+@font-face {
+    font-family: ptSans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+
+.mainBlog {
+    min-height: 100vh;
+}
+
+.blogHead {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    color: #3D3D3D;
+}
+
+.emailBtn {
+    color: #fff;
+    background-color: #3062D8;
+    font-family: ptSans;
+    font-style: normal;
+    border-radius: 5px;
+}
+
+.card {
+    background: #FFFFFF;
+    border: 1px solid rgba(104, 111, 127, 0.4);
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+
+.blogTitle {
+    font-style: normal;
+    font-weight: 600;
+    color: #3D3D3D;
+}
+
+.histText {
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 400;
+    color: #444D63;
+}
+
+@media (max-width: 768px) {
+    .mainBlog {
+        padding: 45px 10px !important;
+    }
+
+    .createPart {
+        width: fit-content !important;
+        margin-right: 10px  !important;
+    }
+
+    .readBtn{
+        width: fit-content !important;
+
+    }
+}

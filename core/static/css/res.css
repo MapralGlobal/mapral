@@ -1,0 +1,23 @@
+@font-face {
+    font-family: ptSans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+
+.mainRow{
+    min-height: 100vh;
+}
+
+.resumeHead{
+    font-family: ptSans;
+    font-style: normal;
+    font-weight: 700;
+    color: #3D3D3D;
+}
+
+.deleteBtn{
+    background-color: #FFBDA8;
+    color:#FF3D00;
+    font-size: medium;
+    padding: 3px;
+}

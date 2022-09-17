@@ -1,0 +1,36 @@
+@font-face {
+    font-family: ptSans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+
+/* .mainORw{
+    min-height: 100vh;
+} */
+
+.jUpHead {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    font-family: ptSans;
+    color: #3D3D3D;
+
+}
+
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(104, 111, 127, 0.4);
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+
+.jobTitle{
+    font-family: ptSans;
+font-style: normal;
+font-weight: 400;
+line-height: 25px;
+color: #3D3D3D;
+
+}
+

@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Mapral
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock css %}
+
+{% block body %}
+
+<div class="row serviceRows">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    {{ message }}    
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="col-lg-7 col-md-7 col-sm-12 px-4 serviceFirstLeft d-flex flex-column justify-content-center">
+        <h1 class="serviceHead mx-3">Our Services</h1>
+        <p class="serviceText mb-0 mx-3">
+            With Mapral, you will be provided top <br> notch services in the following</p>
+        <br>
+        <ul class="fList mx-2">
+            <li class="fListItem my-1">Manpower recruitment </li>
+            <li class="fListItem my-1">Statutory compliance & audit</li>
+            <li class="fListItem my-1">Dealing with Labour law</li>
+            <li class="fListItem my-1">House keeping service</li>
+        </ul>
+    </div>
+    <div class="col-lg-5 col-md-5 col-sm-12">
+        <img src="{% static 'img/serviceImg1.png' %}" alt="" class="serviceHeadImg img-fluid">
+    </div>
+
+
+</div>
+
+<div class="row serviceRows serviceRowsOdd">
+
+    <div class="col-lg-5 col-md-5 col-sm-12">
+        <img src="{% static 'img/manpower.png' %}" alt="" class="serviceHeadImg img-fluid">
+    </div>
+
+
+    <div class="col-lg-7 col-md-7 col-sm-12 px-4 serviceFirstLeft d-flex flex-column justify-content-center">
+        <h1 class="serviceHead mx-5">Manpower</h1>
+
+        <ul class="fList mx-4">
+            <li class="fListItem my-1">Executive MBA/Engineers</li>
+            <li class="fListItem my-1">Technical/Non-Technical Staff</li>
+            <li class="fListItem my-1">Blue Caller-skilled/Unskilled</li>
+            <li class="fListItem my-1">ITI Holders/Back Office</li>
+            <li class="fListItem my-1">Promoters</li>
+            <li class="fListItem my-1">Supervisors</li>
+            <li class="fListItem my-1">Marketing & Collection Staff</li>
+            <li class="fListItem my-1">Event Management for short term </li>
+            <li class="fListItem my-1">Trainee/apprentice</li>
+            <li class="fListItem my-1">Medical Staff (Nurses/Technical /ward boy/PCA/Janitors</li>
+            <li class="fListItem my-1">Data Entry Operators</li>
+            <li class="fListItem my-1">Mathadi Kamgar (Loading /Unloading)</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="row serviceRows">
+    <div class="col-lg-7 col-md-7 col-sm-12 px-4 serviceFirstLeft d-flex flex-column justify-content-center">
+        <h2 class="serviceHead  mx-3">Statutory Compliance & Audit </h2>
+        <ul class="fList mx-2">
+            <li class="fListItem my-1">Salary processing </li>
+            <li class="fListItem my-1">Attendance Tracking </li>
+            <li class="fListItem my-1">Payroll /Report </li>
+            <li class="fListItem my-1">Employee Registration</li>
+            <li class="fListItem my-1">workmen Register </li>
+            <li class="fListItem my-1">Licenses Registration &Renewal </li>
+            <li class="fListItem my-1">Monthly Returns /Challan Of PF/ESIC/PT/LWF/ETC</li>
+            <li class="fListItem my-1">Filing Nomination & Declaration </li>
+            <li class="fListItem my-1">Medical Staff (Nurses/Technical /ward boy/PCA/Janitors</li>
+            <li class="fListItem my-1">Audit Internal /Statutory external</li>
+        </ul>
+    </div>
+    <div class="col-lg-5 col-md-5 col-sm-12">
+        <img src="{% static 'img/audit.png' %}" alt="" class="serviceHeadImg img-fluid">
+    </div>
+</div>
+
+<div class="row serviceRows  serviceRowsOdd b-0">
+
+    <div class="col-lg-5 col-md-5 col-sm-12">
+        <img src="{% static 'img/law.png' %}" alt="" class="serviceHeadImg img-fluid">
+    </div>
+
+
+    <div class="col-lg-7 col-md-7 col-sm-12 px-4 serviceFirstLeft d-flex flex-column justify-content-center">
+        <h1 class="serviceHead mx-5">Dealing with Labour Laws </h1>
+
+        <ul class="fList mx-4">
+
+            <li class="fListItem">Employee provident Fund (EPF)</li>
+            <li class="fListItem">Employee State Insurance Corporation (ESIC)</li>
+            <li class="fListItem">Professional tax (PT)</li>
+            <li class="fListItem">Labour Welfare Fund (LWF)</li>
+            <li class="fListItem">Shop & establishment Act</li>
+            <li class="fListItem">Factory Act</li>
+            <li class="fListItem">Contract Labour act</li>
+            <li class="fListItem">Minimum Wages Act</li>
+            <li class="fListItem">Payment bonus Act</li>
+            <li class="fListItem">Payment Gratuity Act,Maternity Act</li>
+            <li class="fListItem">workmen compensation Act</li>
+            <li class="fListItem">Payment of Wages Act,Apprentice Act</li>
+            <li class="fListItem">Equal Remuneration Act</li>
+            <li class="fListItem">Child Labour Act</li>
+            <li class="fListItem">BOCW Act (Building and other construction work)</li>
+            <li class="fListItem">House Rent Allowance (HRA)</li>
+            <li class="fListItem">The trade Union Act</li>
+            <li class="fListItem">Wages of ОТ (Over line)/Holidays</li>
+            <li class="fListItem">Goods & Services Tax (GST)</li>
+        </ul>
+    </div>
+
+</div>
+
+
+<div class="row footer0 px-4 py-5">
+    <h1 class="footer0Text mx-3">Want to be notified?</h1>
+    <p class="footer0small mx-3">
+        You will be notified when Mapral is prioviding jobs for people like you...
+    </p>
+
+    <form action="" method="POST" class="emailForm mx-4">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-4">
+
+                <input type="email" name="email" class="emailInput form-control" placeholder="Enter your email">
+            </div>
+            <div class="col-2 mx-3">
+                <button type="submit" class="emailBtn btn">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock body %}

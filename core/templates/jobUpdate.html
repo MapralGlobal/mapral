@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Mapral - Job Updates
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/jUpdate.css' %}">
+{% endblock css %}
+
+
+{% block body %}
+
+<div class="row mainORw">
+    <div class="col-md-12 px-4 pt-3">
+        <h2 class="jUpHead">Job Updates</h2>
+    </div>
+
+    <div class="col-12 px-2">
+        <a href="/jobUpdate" class="btn btn-light mx-2">New openings</a>
+        <a href="/jobUpdate/update" class="btn btn-light mx-2">Updates</a>
+    </div>
+
+    {% if open %}
+
+<div class="col-8 px-2 mt-3">
+    {% if notify %}
+    {% for n in notify %}
+        <div class="card px-3 mb-3 py-2">
+            <div class="row">
+                <div class="col-8">
+                    <h5 class=" mb-0 jobTitle">{{n.jobTitle}}</h5>
+                    <small> <p class=" mb-0 helpText">By Mapral</p></small>
+                </div>
+
+                <div class="col-4 d-flex align-items-center">
+                    <p class="notiDate">{{n.dateAdded}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    
+        {% else %}
+        <p>No new openings</p>
+        {% endif %}
+    
+
+    </div>
+
+
+    {% else %}
+    <div class="col-8 px-2 mt-3">
+        {% if update %}
+        {% for up in update %}
+        <div class="card px-3 mb-3 py-2">
+            <div class="row">
+                <div class="col-2">
+                    <img src="https://cdn.icon-icons.com/icons2/1161/PNG/512/1487716857-user_81635.png" alt=""
+                    class="userImg img-fluid w-50">
+                </div>
+                <div class="col-5">
+                    <h5 class=" mb-0 jobTitle">{{up.jobTitle}}</h4>
+                    <small> <p class=" mb-0 helpText">Achieved with Mapral.</p></small>
+                </div>
+
+                <div class="col-4 d-flex align-items-center">
+                    <p class="notiDate">{{up.dateAdded}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% else %}
+        <p>No updates</p>
+        {% endif %}
+
+
+
+    </div>
+    {% endif %}
+</div>
+
+{% endblock body %}
