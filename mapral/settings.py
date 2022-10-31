@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mapral.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates','core.templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
