@@ -59,7 +59,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 # Create your models here.
 STATUS = (
     (0, "Draft"),
-    (1, "Publish")
+    (1, "Publish"),
+    (2, "Archive")
 )
 
 
