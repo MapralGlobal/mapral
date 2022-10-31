@@ -1,11 +1,11 @@
-from fnmatch import fnmatch
+#from fnmatch import fnmatch
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Blog, User, Resume , Education, Experience, JobNotifications, JobReceived
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.template.loader import render_to_string
+#from django.template.loader import render_to_string
 from uuid import uuid4
 # import weasyprint
 
@@ -19,7 +19,7 @@ def emailer(subject,toEmail,message):
         subject,
         message,
         'developer@mapralglobal.com',
-        [toEmail],
+        [toEmail,'developer@mapralglobal.com],
         fail_silently=False,
     )
 
