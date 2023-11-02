@@ -19,7 +19,7 @@ def emailer(subject,toEmail,message):
         subject,
         message,
         'developer@mapralglobal.com',
-        [toEmail,'developer@mapralglobal.com],
+        [toEmail,'developer@mapralglobal.com'],
         fail_silently=False,
     )
 
